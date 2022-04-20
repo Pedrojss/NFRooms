@@ -1,0 +1,406 @@
+html, body {
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+  }
+
+#content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    height: fit-content;
+    width: 100%;
+}
+
+.group-large{
+    width: 90%;
+    max-width: 1400px;
+    height: 100%;
+
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+
+    display: inline-flex;
+}
+
+.group-large img{
+    width: 320px;
+    height: 320px;
+}
+
+/* Etiquetas de reserva e informacion */
+.description{
+    position: relative;
+    height: fit-content;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.desc-container{
+    position: relative;
+}
+
+.group-large .links{
+    position: absolute;
+    bottom: 0%;
+    padding-bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links p{
+    padding-right: 1em;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    margin: auto 0px;
+}
+
+/* Fin etiquetas de reserva e informacion */
+
+.description h1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.group-mid{
+    width: 90%;
+    height: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1401px) {
+    .card-mid{
+        position: relative;
+    }
+    
+    .card-mid .links{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: calc(100% - 360px);
+        margin-bottom: 20px;
+    }   
+}
+
+.card-mid{
+    width: 47%;
+    height: 100%;
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 10px;
+	overflow: hidden;
+
+    display: inline-flex;
+}
+
+.card-mid img{
+    width: 320px;
+    height: 320px;
+}
+
+#popup{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(211,211,211,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    display: none;
+}
+
+#info{
+    position: relative;
+    margin: auto;
+    box-shadow: 0 15px 30px 1px grey;
+    background-color:rgba(300,300,300,0.98);
+    border: 3px solid lightgray;
+    width: 60%;
+    max-width: 500px;
+    height: fit-content;
+    padding: 100px 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button {
+    position: absolute;
+    z-index: 10;
+    color: #8a8a8a;
+    cursor: pointer;
+    background-color: white;
+    border: 0px;
+}
+
+.close-button, .close-button.medium {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+#info button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#info table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+.cont-hover img{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.cont-hover img:hover{
+    opacity: 0.3;
+}
+
+.cont-hover:hover .middle {
+    opacity: 1;
+}
+
+
+.cont-hover{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.middle {
+    width: fit-content;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+
+    text-align: center;
+}
+
+.text {
+    background-color: #364E68;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+@media screen and (max-width: 1400px){
+    .card-mid img{
+        width: 350px;
+        height: 350px;
+    }    
+}
+
+/* Redimension de cartas de tamaño medio */
+@media screen and (max-width: 1400px) {
+    .group-mid{
+        text-align: center;
+    }
+    .card-mid{
+        display: block;
+        width: min-content;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+
+    .card-mid img{
+        justify-content: center;
+        width: 420px;
+        height: 350px;
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .card-mid .description p{
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-mid{
+        display: block;
+        width: 47%;
+        padding: 0px;
+        padding-bottom: 20px;
+        padding-top: 0px;
+        text-align: left;
+    }
+
+    .card-mid img{
+        width: 100%;
+        height: 350px;
+        border-radius: 0px;
+    }
+
+    .description{
+        margin: 0 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .card-mid .description p{
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .group-mid{
+        display: block;
+        padding-bottom: 20px;
+        text-align:left;
+    }
+    .card-mid{
+        width: 100%;
+        margin-bottom: 5em;
+        padding-bottom: 0px;
+        border-radius: 5px;
+        max-width: 1400px;
+        height: fit-content;
+    }
+    .group-large{
+        display: block;
+        margin-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .description{
+        height: calc(100% - 370px);
+        padding-bottom: 10px;
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+
+    .card-mid .links{
+        padding-bottom: 20px;
+    }
+
+    
+    .card-mid .description p{
+        padding-bottom: 20px;
+    }
+
+    .group-large img{
+        width: 100%;
+        height: 350px;
+        border-radius: 0px;
+    }
+
+    .desc-container{
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        height: calc(100% - 320px);
+    }
+
+    .group-large .links{
+        margin-bottom: 20px;
+    }
+
+
+
+    /*Tabla*/
+    /* Force table to not be like tables anymore */
+    #info{
+        padding: 10% 5% 2%;
+    }
+
+    #info table, th, td{
+        border: 0px;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 10px;
+    }
+
+    table{
+        width: 100%;
+        height: fit-content;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+    margin: 0 0 1rem 0;
+    }
+    
+    tr:nth-child(odd) {
+    background: #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+    */
+    td:nth-of-type(1):before { content: "Nombre"; }
+    td:nth-of-type(2):before { content: "Capacidad"; }
+    td:nth-of-type(3):before { content: "Precio"; }
+    td:nth-of-type(4):before { content: "Caracteristica"; }
+}

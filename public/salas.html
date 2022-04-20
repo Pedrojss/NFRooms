@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>NF Rooms</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./css/salas.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header style="position: fixed; top: 0%; width: 100%; z-index: 2;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <img class="navbar-brand" src="./imagenes/a-logo-png-png-image-489304.png" style="width: 2em;" alt="logo">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="barra" style="gap: 1em;" class="navbar-nav ms-auto mb-2 mb-lg-0 nav nav-pills nav-justified">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./reserva.html">Reserva</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" style="color: white;" href="./salas.html">Nuestras&nbsp;salas</a>
+                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./localizacion.html">Conócenos</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <div id="popup">
+            <section id="info">
+                <button class="close-button" onclick="cerrarPopUp();" aria-label="Close alert" type="button" data-close>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Capacidad</th>
+                            <th>Precio</th>
+                            <th>Caracteristica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="nombre">Sala Kyoto</td>
+                            <td id="capacidad">20</td>
+                            <td id="precio">400</td>
+                            <td>Prueba</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <section id="content">
+       
+            <article class="group-large">
+                <div class="cont-hover">
+                    <img src="./imagenes/salas/2614e580a7643d072ccbcec798e19fa3.jpg" alt="Sala X">
+                    <div class="middle">
+                        <!-- Espacio para boton de reserva o informacion adicional -->
+                    </div>
+                </div>
+                <div class="desc-container">
+                    <div class="description">
+                        <h1>Sala Kyoto</h1>
+                        <p>La sala Kyoto, es una sala insonorizada dedicada a espacios para baile y yoga.<br>
+
+                        La sala está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines.
+                        
+                        Está disponible para clases y talleres.</p>
+                    </div>
+                    <div class="links">
+                        <p onclick="cargarInformacion('Sala Kyoto', 50, 1200);">Mas&nbsp;información</p>
+                        <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                    </div>
+                </div>
+            </article>
+
+            <div class="group-mid">
+                <article class="card-mid">
+                    <img src="./imagenes/salas/51yquyPnEAL._AC_SY350_.jpg" alt="Sala X">
+                    <div style="height: calc(100% - 420px);">
+                        <div class="description">
+                            <h1>Sala Miami</h1>
+                            <p>La sala Miami es una sala de estilo moderno con un par de elegantes mesas de trabajo y cómodas sillas de oficina que, junto con las lámparas de lectura, crean un ambiente relajado y tranquilo.</p>
+                        </div>
+                        <div class="links">
+                            <p onclick="cargarInformacion('Sala Miami', 2, 40);">Mas&nbsp;información</p>
+                            <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card-mid">
+                    <img src="./imagenes/salas/1-85687.jpeg" alt="Sala X">
+                    <div style="height: calc(100% - 420px);">
+                        <div class="description">
+                            <h1>Sala Otawa</h1>
+                            <p>La sala Otawa es una sala dedicada al trabajo individual, es ideal para estudiantes que necesitan un lugar tranquilo para estudiar o para aquellos que necesitan un lugar para trabajar en silencio.
+
+
+
+                                La sala se encuentra en el segundo piso.</p>
+                        </div>
+                        <div class="links">
+                            <p onclick="cargarInformacion('Sala Otawa', 1, 25);">Mas&nbsp;información</p>
+                            <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <article class="group-large">
+                <div class="cont-hover">
+                    <img src="./imagenes/salas/DSC_0049-350x350.jpg" alt="Sala X">
+                    <div class="middle">
+                        <!-- Espacio para boton de reserva o informacion adicional -->
+                    </div>
+                </div>
+                <div class="desc-container">
+                    <div class="description">
+                        <h1>Sala Berlin</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="links">
+                        <p onclick="cargarInformacion('Sala Berlin', 5, 500);">Mas&nbsp;información</p>
+                        <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <footer>
+            <div id="marca">
+                <img id="logo" src="./imagenes/a-logo-png-png-image-489304.png" alt="logo">
+                <h4>NF Rooms</h4>
+            </div>
+
+            <div id="contacto-bloque">
+                <div class="contacto-item">
+                    <h3>Contacto</h3>
+                    <a href="mailto:contacto@nfrooms.com">contacto@nfrooms.com</a>
+                    <p>(+34) 673 891 638</p>
+                </div>
+    
+                <div class="contacto-item">
+                    <h3>Siguenos</h3>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                </div>
+            </div>
+
+            <div id="sitemap">
+                <p><a href="">Inicio</a></p>
+                <p>Reserva</p>
+                <p>Nuestras&nbsp;salas</p>
+                <p>Conócenos</p>
+                <p>Noticias</p>
+            </div>
+        </footer>
+        <script src="js/salas.js"></script>
+    </body>
+</html>

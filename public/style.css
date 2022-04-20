@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{ 
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column; 
+}
+
+#marca{
+    height: fit-content;
+    width: 25%;
+    display: inline-flex;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+#logo{
+    width: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.menu{
+    height: 100%;
+    margin-right: 20px;
+    justify-content:flex-end;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+header nav li {
+    list-style: none;
+}
+
+
+
+/*Footer*/
+
+footer{
+    margin-top: auto;
+    width: 100%;
+    height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+    bottom: 0%;
+    background-color: lightgray;
+    color: black;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-around;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+footer p{
+    color: gray;
+    display: flex;
+}
+
+footer #marca{
+    height: 100%;
+    width: 15%;
+    min-width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+#contacto-bloque{
+    width: 100%;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    gap: 2em;
+    background-color: lightgray;
+}
+
+#sitemap{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3em;
+    padding-right: 20px;
+}
+
+#sitemap p{
+    position: relative;
+    height: fit-content;
+    top: 45%;
+}
+
+#sitemap a{
+    text-decoration: none;
+    color: gray;
+}
+
+#sitemap a:hover{
+    text-decoration: underline;
+}
+
+
+/* Rediseño segun tamaño */
+@media screen and (max-width: 1140px) {
+    footer{
+        width: 100%;
+        height: fit-content;
+        bottom: 0%;
+        background-color: lightgray;
+        color: black;
+    
+        display: flex;
+        align-items: center;
+    
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
+
+    #sitemap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-right: 0px;
+        gap: 3em;
+        background-color: lightgray;
+    }
+}
+
+/*Tamaños de pantalla medio*/
+@media screen and (max-width: 668px) {
+    /*Convertir el sitemap en columna*/
+    #sitemap{
+        display:block;
+        width: 100%;
+    }
+
+    #sitemap p{
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 4px;
+    }
+
+    #contacto-bloque{
+        padding-top: 20px;
+    }
+
+    header{
+        width: 100%;
+        height: fit-content;
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #marca{
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav{
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu{
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        padding-top: 10px;
+    }
+}
+
+/* Tamaño movil */
+@media screen and (max-width: 486px) {
+    .menu{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .menu li{
+        padding-bottom: 8px;
+    }
+
+    #contacto-bloque{
+        display: block;
+        width: 100%;
+    }
+
+    .contacto-item{
+       text-align: center;
+       align-items: center;
+        padding-top: 20px;
+    }
+
+    .contacto-item p{
+        width: 100%;
+        justify-content: center;
+        padding-top: 4px;
+    }
+}
