@@ -245,6 +245,7 @@ function validacion(){
     }
     console.log(valido);
     if(valido){
+        postReserva();
         window.alert("Los datos son correctos");
     }
     else
